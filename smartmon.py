@@ -68,6 +68,13 @@ smart_attributes_whitelist = {
     'workld_host_reads_perc',
     'workld_media_wear_indic',
     'workload_minutes',
+    'percent_lifetime_remain',
+    'total_lbas_written',
+    'host_program_page_count',
+    'ftl_program_page_count',
+    'ssd_life_left',
+    'lifetime_wites_gib',
+    'airflow_temperature_cel',
 }
 
 Metric = collections.namedtuple('Metric', 'name labels value')

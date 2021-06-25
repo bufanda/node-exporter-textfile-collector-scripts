@@ -124,6 +124,7 @@ def metric_print_meta(metric, prefix=''):
 def metric_print(metric, prefix=''):
     print(metric_format(metric, prefix))
 
+
 def find_smartctl():
     loc = "smartctl"
     locations = [
@@ -137,11 +138,11 @@ def find_smartctl():
         "/sbin",
     ]
 
-    for l in locations:
-        if path.isdir(l):
-            for f in listdir(l):
-                if "smartctl" == f:
-                    loc = f"{l}/smartctl"
+    for location in locations:
+        if path.isdir(location):
+            for _file in listdir(location):
+                if "smartctl" == _file:
+                    loc = f"{location}/smartctl"
     return loc
 
 

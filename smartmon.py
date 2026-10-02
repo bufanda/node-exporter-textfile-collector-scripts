@@ -357,7 +357,7 @@ def collect_ata_error_count(device):
 
 
 def collect_disks_smart_metrics(wakeup_disks):
-    now = int(datetime.datetime.now(datetime.UTC).timestamp())
+    now = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
 
     for device in find_devices():
         yield Metric('smartctl_run', device.base_labels, now)
